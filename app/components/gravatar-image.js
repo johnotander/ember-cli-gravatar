@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  tagName: 'span',
+
   size: 250,
   email: '',
   alt: '',
