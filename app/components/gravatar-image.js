@@ -17,5 +17,9 @@ export default Ember.Component.extend({
 
   altText: function() {
     return this.get('alt') || this.get('email');
-  }.property('alt')
+  }.property('alt'),
+
+  imgClass: function() {
+    return this.get('imgClass')
+  }.property('imgClass')
 });
