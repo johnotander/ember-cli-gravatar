@@ -4,7 +4,6 @@ export default Ember.Component.extend({
   size: 250,
   email: '',
   alt: '',
-  imgClass: '',
   default: '',
 
   gravatarUrl: function() {
