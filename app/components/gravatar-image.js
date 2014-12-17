@@ -1,10 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  tagName: 'span',
+
   size: 250,
   email: '',
   alt: '',
-  imgClass: '',
   default: '',
 
   gravatarUrl: function() {
@@ -17,5 +18,9 @@ export default Ember.Component.extend({
 
   altText: function() {
     return this.get('alt') || this.get('email');
-  }.property('alt')
+  }.property('alt'),
+
+  imgClass: function() {
+    return this.get('imgClass')
+  }.property('imgClass')
 });
