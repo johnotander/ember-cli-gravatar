@@ -24,5 +24,11 @@ export default Service.extend({
         }
       });
     });
-  }
+  },
+
+  getImageURL(email, imageSize = 400, default = 'identicon', secure = true) {
+    const hash = md5(email);
+    const protocol = secure ? 'https' : 'http';
+    return protocol + '://www.gravatar.com/avatar/' + hash + '?s=' + imageSize + '&d=' + default;
+  },
 });
